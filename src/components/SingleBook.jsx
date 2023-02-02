@@ -33,7 +33,9 @@ class SingleBook extends Component {
             <Card.Text>
               {this.props.singleBook.category} | {this.props.singleBook.price}€
             </Card.Text>
-            {this.state.selected && <CommentsArea></CommentsArea>}
+            {this.state.selected && (
+              <CommentsArea asin={this.props.singleBook.asin}></CommentsArea>
+            )}
           </Card>
         </Col>
       </>
