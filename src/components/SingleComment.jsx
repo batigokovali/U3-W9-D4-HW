@@ -7,8 +7,8 @@ class singleComment extends Component {
   deleteComment = async () => {
     try {
       let response = await fetch(deleteURL + this.props.singleCommentID, {
+        method: "DELETE",
         headers: {
-          Method: "DELETE",
           Authorization:
             "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2RiYzJjMDUwMWZlODAwMTU2MGMyMzUiLCJpYXQiOjE2NzUzNDY2MjQsImV4cCI6MTY3NjU1NjIyNH0.L9TWAnkkI6V95MFjHRHarcB_cj1rJo5fo-QWNsZgByE",
         },
